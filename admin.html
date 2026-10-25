@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adminisztráció | Étterem név</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+
+<header class="header">
+    <a href="index.html" class="logo">Étterem név</a>
+    <nav>
+        <a href="index.html">Vendégoldal</a>
+        <a href="#admin-login">Admin belépés</a>
+        <a href="#dashboard">Vezérlőpult</a>
+    </nav>
+</header>
+
+<main class="admin-main">
+
+    <section class="admin-login-section" id="admin-login">
+        <div class="section-heading">
+            <p class="eyebrow">Vezetői hozzáférés</p>
+            <h1>Vezető bejelentkezés</h1>
+            <p>Jelentkezz be az étterem kezeléséhez.</p>
+        </div>
+
+        <!-- admin adatai + ellenőrzés -->
+
+        <form class="form-card login-card" action="#" method="post">
+            <div class="form-group">
+                <label for="admin-email">Admin e-mail-cím</label>
+                <input type="email" id="admin-email" name="email"
+                       placeholder="admin@etterem.hu"
+                       autocomplete="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="admin-password">Jelszó</label>
+                <input type="password" id="admin-password" name="password"
+                       placeholder="Admin jelszó"
+                       autocomplete="current-password" required>
+            </div>
+
+            <button type="submit" class="btn btn-full">
+                Belépés az adminfelületre
+            </button>
+
+            <a href="index.html" class="back-link">← Vissza a főoldalra</a>
+        </form>
+    </section>
+
+    <!-- admin vezérlőpult -->
+
+    <section class="dashboard" id="dashboard">
+        <div class="dashboard-heading">
+            <div>
+                <p class="eyebrow">Étterem kezelése</p>
+                <h1>Vezérlőpult</h1>
+            </div>
+            <a href="index.html" class="btn btn-outline">Kilépés</a>
+        </div>
+
+        <div class="stats-grid">
+            <article class="stat-card">
+                <span>Mai foglalások</span>
+                <strong>12</strong>
+                <small>Demóadat</small>
+            </article>
+
+            <article class="stat-card">
+                <span>Szabad asztalok</span>
+                <strong>8</strong>
+                <small>Demóadat</small>
+            </article>
+
+            <article class="stat-card">
+                <span>Étlapon szereplő ételek</span>
+                <strong>24</strong>
+                <small>Demóadat</small>
+            </article>
+        </div>
+
+        <section class="admin-panel">
+            <div class="panel-heading">
+                <div>
+                    <h2>Foglalások kezelése</h2>
+                    <p>A beérkezett foglalások áttekintése.</p>
+                </div>
+            </div>
+
+            <!-- foglalás infók adatbázis ide jön -->
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Vendég</th>
+                            <th>Dátum</th>
+                            <th>Időpont</th>
+                            <th>Fő</th>
+                            <th>Állapot</th>
+                            <th>Művelet</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Kovács Ádám</td>
+                            <td>2026.10.22.</td>
+                            <td>18:00</td>
+                            <td>2</td>
+                            <td><span class="status status-pending">Függőben</span></td>
+                            <td>
+                                <button type="button" class="small-btn">
+                                    Jóváhagyás
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Király Sándor</td>
+                            <td>2026.10.22.</td>
+                            <td>19:00</td>
+                            <td>4</td>
+                            <td><span class="status status-confirmed">Visszaigazolva</span></td>
+                            <td>
+                                <button type="button" class="small-btn">
+                                    Részletek
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Koczka Ferenc</td>
+                            <td>2026.10.23.</td>
+                            <td>13:00</td>
+                            <td>3</td>
+                            <td><span class="status status-pending">Függőben</span></td>
+                            <td>
+                                <button type="button" class="small-btn">
+                                    Jóváhagyás
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="admin-panel">
+            <div class="panel-heading">
+                <div>
+                    <h2>Étlap kezelése</h2>
+                    <p>Új étel adatainak megadása.</p>
+                </div>
+            </div>
+
+            <!-- ételek adatbázis kell ide is -->
+
+            <form class="form-grid admin-menu-form"
+                  action="#" method="post">
+
+                <div class="form-group">
+                    <label for="food-name">Étel neve</label>
+                    <input type="text" id="food-name" name="food_name"
+                           placeholder="Étel neve" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="food-category">Kategória</label>
+                    <select id="food-category" name="category" required>
+                        <option value="">Válassz kategóriát!</option>
+                        <option value="eloetel">Előétel</option>
+                        <option value="foetel">Főétel</option>
+                        <option value="desszert">Desszert</option>
+                        <option value="ital">Ital</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="food-price">Ár (Ft)</label>
+                    <input type="number" id="food-price" name="price"
+                           min="0" step="10" placeholder="2990" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="food-description">Leírás</label>
+                    <input type="text" id="food-description"
+                           name="description" placeholder="Az étel leírása">
+                </div>
+
+                <div class="form-group form-grid-full">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="available" checked>
+                        Elérhető az étlapon
+                    </label>
+                </div>
+
+                <div class="form-grid-full">
+                    <button type="submit" class="btn">
+                        Új étel hozzáadása
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section class="admin-panel">
+            <h2>Adatbázis táblák</h2>
+            <p class="panel-description">
+                Az étterem adatbázisa
+            </p>
+
+            <div class="database-grid">
+                <div class="database-item">
+                    <strong>Idősávok</strong>
+                    <p>Időpont, kezdés, befejezés, elérhetőség</p>
+                </div>
+                <div class="database-item">
+                    <strong>Asztalok</strong>
+                    <p>Asztalazonosító, férőhely, típus</p>
+                </div>
+                <div class="database-item">
+                    <strong>Foglalások</strong>
+                    <p>Vendég, asztal, dátum, időpont, állapot</p>
+                </div>
+                <div class="database-item">
+                    <strong>Ételek</strong>
+                    <p>Név, kategória, ár, leírás, elérhetőség</p>
+                </div>
+                <div class="database-item">
+                    <strong>Felhasználók</strong>
+                    <p>Egész név, email, ár, foglalások száma</p>
+                </div>
+                <div class="database-item">
+                    <strong>Adminok</strong>
+                    <p>Egész név, email</p>
+                </div>
+            </div>
+        </section>
+    </section>
+</main>
+
+<footer class="footer">
+    <a href="index.html" class="logo">Étterem név</a>
+    <p>Adminisztrációs felület</p>
+</footer>
+
+</body>
+</html>

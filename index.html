@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Étterem név | Éttermi Asztalfoglalás</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">Étterem név</a>
+
+    <nav>
+        <a href="#kezdolap">Kezdőlap</a>
+        <a href="#etlap">Étlap</a>
+        <a href="#foglalas">Asztalfoglalás</a>
+        <a href="#belepes">Bejelentkezés</a>
+        <a href="admin.html" class="admin-link">Admin</a>
+    </nav>
+</header>
+
+<main>
+    <section class="hero" id="kezdolap">
+        <div class="hero-content">
+            <p class="eyebrow">Üdvözlünk éttermünkben!</p>
+            <h1>Ízek, amelyek<br>élménnyé válnak.</h1>
+            <p>
+                Fedezd fel étlapunkat, és foglald le
+                asztalodat néhány egyszerű lépésben!
+            </p>
+            <a href="#foglalas" class="btn">Asztalfoglalás</a>
+        </div>
+    </section>
+
+    <section class="section" id="etlap">
+        <div class="section-heading">
+            <p class="eyebrow">Séfünk ajánlata</p>
+            <h2>Étlapunk</h2>
+            <p>ez a rész lehet át lesz alakítva 5 ikonra és felugró ablakokra több étellel</p>
+        </div>
+
+        <!-- adatbázisból majd ide kellenek az ételek -->
+
+        <div class="menu-grid">
+            <article class="menu-card">
+                <div class="food-icon">🍝</div>
+                <div class="menu-info">
+                    <span class="category">Főétel</span>
+                    <h3>Bolognai</h3>
+                    <p>étel leírása ._.</p>
+                    <strong>3 490 Ft</strong>
+                </div>
+            </article>
+
+            <article class="menu-card">
+                <div class="food-icon">🥩</div>
+                <div class="menu-info">
+                    <span class="category">Főétel</span>
+                    <h3>Grillezett marhaszelet</h3>
+                    <p>étel leírása 2</p>
+                    <strong>5 990 Ft</strong>
+                </div>
+            </article>
+
+            <article class="menu-card">
+                <div class="food-icon">🥗</div>
+                <div class="menu-info">
+                    <span class="category">Saláta</span>
+                    <h3>Friss saláta</h3>
+                    <p>mcdonalds hamburger alapanyagok</p>
+                    <strong>2 490 Ft</strong>
+                </div>
+            </article>
+
+            <article class="menu-card">
+                <div class="food-icon">🍰</div>
+                <div class="menu-info">
+                    <span class="category">Desszert</span>
+                    <h3>Eper torta</h3>
+                    <p>Fincsi süti</p>
+                    <strong>1 690 Ft</strong>
+                </div>
+            </article>
+
+            <article class="menu-card">
+                <div class="food-icon">🍸</div>
+                <div class="menu-info">
+                    <span class="category">Ital
+                    </span>
+                    <h3>Pia</h3>
+                    <p>jó sok lesz</p>
+                    <strong>600 Ft</strong>
+                </div>
+            </article>
+
+            <!-- 2. forma az ikonra ha felugró ablakok lesznek -->
+
+            <article class="menu-card">
+                <div class="food-icon">🥣</div>
+                <div class="menu-info">
+                    
+                    <h3>Leves</h3>
+                    <p>példa a másik designra</p>
+                    <strong>2 750 Ft</strong>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="section reservation-section" id="foglalas">
+        <div class="section-heading">
+            <p class="eyebrow">Foglalj nálunk</p>
+            <h2>Asztalfoglalás</h2>
+            <p>Add meg az adatokat, és válaszd ki a megfelelő időpontot!</p>
+        </div>
+
+        <!-- helyek és időpontok adatbázis ide kell majd -->
+
+        <form class="form-card" action="#" method="post">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="guest-name">Teljes név</label>
+                    <input type="text" id="guest-name" name="guest_name"
+                           placeholder="Pl. Kovács Anna" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="guest-email">E-mail-cím</label>
+                    <input type="email" id="guest-email" name="email"
+                           placeholder="nev@email.hu" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Foglalás dátuma</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Időpont</label>
+                    <select id="time" name="time" required>
+                        <option value="">Válassz időpontot!</option>
+                        <option value="12:00">12:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="18:00">18:00</option>
+                        <option value="19:00">19:00</option>
+                        <option value="20:00">20:00</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="guests">Vendégek száma</label>
+                    <select id="guests" name="guests" required>
+                        <option value="1">1 fő</option>
+                        <option value="2" selected>2 fő</option>
+                        <option value="3">3 fő</option>
+                        <option value="4">4 fő</option>
+                        <option value="5">5 fő</option>
+                        <option value="6">6 fő</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="table">Asztal típusa</label>
+                    <select id="table" name="table_type" required>
+                        <option value="">Válassz asztalt!</option>
+                        <option value="normal">Normál asztal</option>
+                        <option value="window">Ablak melletti</option>
+                        <option value="family">Családi asztal</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="note">Megjegyzés (nem kötelező)</label>
+                <textarea id="note" name="note" rows="3"
+                          placeholder="Egyéb kérések..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-full">
+                Foglalás elküldése
+            </button>
+            <p class="form-note">
+                A foglalás véglegesítéséhez szerveroldali feldolgozás szükséges.
+            </p>
+        </form>
+    </section>
+
+    <section class="section login-section" id="belepes">
+        <div class="section-heading">
+            <p class="eyebrow">Saját fiók</p>
+            <h2>Bejelentkezés</h2>
+            <p>Lépj be a foglalásaid kezeléséhez.</p>
+        </div>
+
+        <!-- felhasználók és foglalások adatbázis ide jön -->
+
+        <form class="form-card login-card" action="#" method="post">
+            <div class="form-group">
+                <label for="login-email">E-mail-cím</label>
+                <input type="email" id="login-email" name="email"
+                       placeholder="E-mail-címed" autocomplete="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="login-password">Jelszó</label>
+                <input type="password" id="login-password" name="password"
+                       placeholder="Jelszavad" autocomplete="current-password"
+                       required>
+            </div>
+
+            <button type="submit" class="btn btn-full">Bejelentkezés</button>
+
+            <p class="form-note">
+                Még nincs fiókod? A regisztráció a későbbi fejlesztés része.
+            </p>
+        </form>
+    </section>
+</main>
+
+<footer class="footer">
+    <a href="index.html" class="logo">Étterem név</a>
+    <a href="admin.html">Adminisztráció</a>
+</footer>
+
+</body>
+</html>
