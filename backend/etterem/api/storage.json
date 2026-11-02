@@ -1,0 +1,107 @@
+{
+    "etelek": [
+        {
+            "id": 1,
+            "nev": "Bolognai",
+            "kategoria": "foetel",
+            "ar": 3490,
+            "leiras": "étel leírása ._.",
+            "elerheto": true
+        },
+        {
+            "id": 2,
+            "nev": "Grillezett marhaszelet",
+            "kategoria": "foetel",
+            "ar": 5990,
+            "leiras": "étel leírása 2",
+            "elerheto": true
+        },
+        {
+            "id": 3,
+            "nev": "Friss saláta",
+            "kategoria": "eloetel",
+            "ar": 2490,
+            "leiras": "mcdonalds hamburger alapanyagok",
+            "elerheto": true
+        },
+        {
+            "id": 4,
+            "nev": "Eper torta",
+            "kategoria": "desszert",
+            "ar": 1690,
+            "leiras": "Fincsi süti",
+            "elerheto": true
+        },
+        {
+            "id": 5,
+            "nev": "Pia",
+            "kategoria": "ital",
+            "ar": 600,
+            "leiras": "jó sok lesz",
+            "elerheto": true
+        },
+        {
+            "id": 6,
+            "nev": "Leves",
+            "kategoria": "eloetel",
+            "ar": 2750,
+            "leiras": "példa a másik designra",
+            "elerheto": true
+        }
+    ],
+    "foglalasok": [
+        {
+            "id": 1,
+            "vendeg_nev": "Kovács Ádám",
+            "email": "adam@email.hu",
+            "datum": "2026-10-22",
+            "idopont": "18:00",
+            "vendegek_szama": 2,
+            "asztal_tipus": "normal",
+            "megjegyzes": "",
+            "allapot": "Visszaigazolva"
+        },
+        {
+            "id": 2,
+            "vendeg_nev": "Király Sándor",
+            "email": "sandor@email.hu",
+            "datum": "2026-10-22",
+            "idopont": "19:00",
+            "vendegek_szama": 4,
+            "asztal_tipus": "window",
+            "megjegyzes": "",
+            "allapot": "Visszaigazolva"
+        },
+        {
+            "id": 3,
+            "vendeg_nev": "Koczka Ferenc",
+            "email": "ferenc@email.hu",
+            "datum": "2026-10-23",
+            "idopont": "13:00",
+            "vendegek_szama": 3,
+            "asztal_tipus": "normal",
+            "megjegyzes": "",
+            "allapot": "Visszaigazolva"
+        },
+        {
+            "vendeg_nev": "Teszt elek",
+            "email": "tesztelek@fakemail.com",
+            "datum": "2026-11-05",
+            "idopont": "13:00",
+            "vendegek_szama": 3,
+            "asztal_tipus": "window",
+            "megjegyzes": "nem mukszik xddd",
+            "allapot": "Visszaigazolva",
+            "id": 4
+        }
+    ],
+    "idosavok": [
+        "12:00",
+        "13:00",
+        "14:00",
+        "18:00",
+        "19:00",
+        "20:00"
+    ],
+    "asztalok_szama": 8
+}
