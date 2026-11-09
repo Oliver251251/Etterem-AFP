@@ -287,6 +287,169 @@ section {
     font-size: 17px;
 }
 
+/*Étlap 2.0*/
+
+
+/* LENYITHATÓ ÉTLAPKÁRTYÁK */
+
+.menu-card {
+    display: block;
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+}
+
+/* Kattintható kártyafejléc */
+
+.menu-header {
+    width: 100%;
+    min-height: 132px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.menu-header .food-icon {
+    flex-shrink: 0;
+}
+
+.menu-header .menu-info {
+    flex: 1;
+}
+
+.menu-header .menu-info h3 {
+    margin: 4px 0 8px;
+    font-family: Georgia, serif;
+    font-size: 19px;
+}
+
+.menu-header .menu-info strong {
+    color: var(--primary);
+    font-size: 17px;
+}
+
+/* Lenyíló nyíl */
+
+.menu-header .arrow {
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #f4ece2;
+    color: var(--primary);
+    font-size: 25px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.menu-card.active .arrow {
+    transform: rotate(180deg);
+    background: var(--primary);
+    color: white;
+}
+
+/* Lenyíló étellista */
+
+.menu-content {
+    max-height: 0;
+    padding: 0 24px;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+        max-height 0.4s ease,
+        opacity 0.3s ease,
+        padding 0.4s ease;
+}
+
+.menu-card.active .menu-content {
+    max-height: 600px;
+    padding: 0 24px 24px;
+    opacity: 1;
+}
+
+/* Egy étel sora */
+
+.food-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 15px;
+    margin-top: 8px;
+    background: #faf7f2;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+.food-item:hover {
+    background: #f4ece2;
+}
+
+.food-item span {
+    color: var(--text);
+}
+
+.food-item strong {
+    flex-shrink: 0;
+    color: var(--primary);
+    font-size: 14px;
+}
+
+/* MOBILNÉZET */
+
+@media (max-width: 600px) {
+    .menu-header {
+        min-height: 100px;
+        padding: 17px;
+        gap: 13px;
+    }
+
+    .menu-header .food-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+    }
+
+    .menu-header .menu-info h3 {
+        font-size: 17px;
+    }
+
+    .menu-header .menu-info strong {
+        font-size: 14px;
+    }
+
+    .menu-header .arrow {
+        width: 30px;
+        height: 30px;
+        font-size: 21px;
+    }
+
+    .menu-card.active .menu-content {
+        padding: 0 15px 18px;
+    }
+
+    .food-item {
+        padding: 11px;
+        font-size: 12px;
+    }
+
+    .food-item strong {
+        font-size: 12px;
+    }
+}
+
+
 /*foglalás és infók*/
 
 .reservation-section {
@@ -423,14 +586,6 @@ section {
     max-width: 1250px;
     margin: 0 auto;
     padding: 50px 5%;
-}
-
-.admin-login-section {
-    padding: 25px 0 75px;
-}
-
-.admin-login-section .section-heading h1 {
-    font-size: 36px;
 }
 
 .dashboard {
