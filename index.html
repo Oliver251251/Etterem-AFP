@@ -38,75 +38,217 @@
         <div class="section-heading">
             <p class="eyebrow">Séfünk ajánlata</p>
             <h2>Étlapunk</h2>
-            <p>ez a rész lehet át lesz alakítva 5 ikonra és felugró ablakokra több étellel</p>
         </div>
 
         <!-- adatbázisból majd ide kellenek az ételek -->
 
-        <div class="menu-grid">
-            <article class="menu-card">
-                <div class="food-icon">🍝</div>
-                <div class="menu-info">
-                    <span class="category">Főétel</span>
-                    <h3>Bolognai</h3>
-                    <p>étel leírása ._.</p>
-                    <strong>3 490 Ft</strong>
-                </div>
-            </article>
+        
+<div class="menu-grid">
 
-            <article class="menu-card">
-                <div class="food-icon">🥩</div>
-                <div class="menu-info">
-                    <span class="category">Főétel</span>
-                    <h3>Grillezett marhaszelet</h3>
-                    <p>étel leírása 2</p>
-                    <strong>5 990 Ft</strong>
-                </div>
-            </article>
-
-            <article class="menu-card">
-                <div class="food-icon">🥗</div>
-                <div class="menu-info">
-                    <span class="category">Saláta</span>
-                    <h3>Friss saláta</h3>
-                    <p>mcdonalds hamburger alapanyagok</p>
-                    <strong>2 490 Ft</strong>
-                </div>
-            </article>
-
-            <article class="menu-card">
-                <div class="food-icon">🍰</div>
-                <div class="menu-info">
-                    <span class="category">Desszert</span>
-                    <h3>Eper torta</h3>
-                    <p>Fincsi süti</p>
-                    <strong>1 690 Ft</strong>
-                </div>
-            </article>
-
-            <article class="menu-card">
-                <div class="food-icon">🍸</div>
-                <div class="menu-info">
-                    <span class="category">Ital
-                    </span>
-                    <h3>Pia</h3>
-                    <p>jó sok lesz</p>
-                    <strong>600 Ft</strong>
-                </div>
-            </article>
-
-            <!-- 2. forma az ikonra ha felugró ablakok lesznek -->
-
-            <article class="menu-card">
-                <div class="food-icon">🥣</div>
-                <div class="menu-info">
-                    
-                    <h3>Leves</h3>
-                    <p>példa a másik designra</p>
-                    <strong>2 750 Ft</strong>
-                </div>
-            </article>
+    <!-- FŐÉTELEK -->
+    <article class="menu-card">
+        <div class="menu-header" onclick="toggleMenu(this)">
+            <div class="food-icon">🍝</div>
+            <div class="menu-info">
+                <h3>Főételek</h3>
+                <strong>2500-5000 Ft</strong>
+            </div>
+            
         </div>
+
+        <div class="menu-content">
+            <div class="food-item">
+                <span>Rántott csirkemell</span>
+                <strong>2800 Ft</strong>
+            </div>
+            <div class="food-item">
+                <span>Grillezett csirkemell</span>
+                <strong>3200 Ft</strong>
+            </div>
+            <div class="food-item">
+                <span>Rántott sertésszelet</span>
+                <strong>3000 Ft</strong>
+            </div>
+            <div class="food-item">
+                <span>Sült hekk</span>
+                <strong>3500 Ft</strong>
+            </div>
+            <div class="food-item">
+                <span>Marhapörkölt</span>
+                <strong>4200 Ft</strong>
+            </div>
+            <div class="food-item">
+                <span>Vegetáriánus tészta</span>
+                <strong>2700 Ft</strong>
+            </div>
+        </div>
+    </article>
+
+    <!-- SALÁTÁK -->
+    <article class="menu-card">
+        <div class="menu-header" onclick="toggleMenu(this)">
+            <div class="food-icon">🥬</div>
+            <div class="menu-info">
+                <h3>Saláták</h3>
+                <strong>1500-3000 Ft</strong>
+            </div>
+            
+        </div>
+
+        <div class="menu-content">
+            <div class="food-item">
+                <span>Görög saláta</span>
+                <strong>2200 Ft</strong>
+            </div>
+            <div class="food-item">
+                <span>Cézársaláta</span>
+                <strong>2800 Ft</strong>
+            </div>
+            <div class="food-item">
+                <span>Friss kerti saláta</span>
+                <strong>1600 Ft</strong>
+            </div>
+            <div class="food-item">
+                <span>Csirkés saláta</span>
+                <strong>2900 Ft</strong>
+            </div>
+        </div>
+    </article>
+
+    <!-- DESSZERTEK -->
+    <article class="menu-card">
+        <div class="menu-header" onclick="toggleMenu(this)">
+            <div class="food-icon">🍰</div>
+            <div class="menu-info">
+                <h3>Desszertek</h3>
+                <strong>700-2500 Ft</strong>
+            </div>
+            
+        </div>
+
+        <div class="menu-content">
+            <div class="food-item">
+                <span>Somlói galuska</span>
+                <strong>1800 Ft</strong>
+            </div>
+            <div class="food-item">
+                <span>Gundel palacsinta</span>
+                <strong>2200 Ft</strong>
+            </div>
+            <div class="food-item">
+                <span>Nutellás palacsinta</span>
+                <strong>1400 Ft</strong>
+            </div>
+            <div class="food-item">
+                <span>Csokoládétorta</span>
+                <strong>1900 Ft</strong>
+            </div>
+            <div class="food-item">
+                <span>Fagylaltkehely</span>
+                <strong>2000 Ft</strong>
+            </div>
+        </div>
+    </article>
+
+    <!-- ITALOK -->
+    <article class="menu-card">
+        <div class="menu-header" onclick="toggleMenu(this)">
+            <div class="food-icon">🍸</div>
+            <div class="menu-info">
+                <h3>Italok</h3>
+                <strong>300-3000 Ft</strong>
+            </div>
+            
+        </div>
+
+        <div class="menu-content">
+            <div class="food-item">
+                <span>Ásványvíz</span>
+                <strong>500 Ft</strong>
+            </div>
+            <div class="food-item">
+                <span>Cola</span>
+                <strong>700 Ft</strong>
+            </div>
+            <div class="food-item">
+                <span>Házi limonádé</span>
+                <strong>1200 Ft</strong>
+            </div>
+            <div class="food-item">
+                <span>Kávé</span>
+                <strong>600 Ft</strong>
+            </div>
+            <div class="food-item">
+                <span>Tea</span>
+                <strong>700 Ft</strong>
+            </div>
+        </div>
+    </article>
+
+    <!-- LEVESEK -->
+    <article class="menu-card">
+        <div class="menu-header" onclick="toggleMenu(this)">
+            <div class="food-icon">🍲</div>
+            <div class="menu-info">
+                <h3>Levesek</h3>
+                <strong>1300-3000 Ft</strong>
+            </div>
+            
+        </div>
+
+        <div class="menu-content">
+            <div class="food-item">
+                <span>Húsleves</span>
+                <strong>1600 Ft</strong>
+            </div>
+            <div class="food-item">
+                <span>Gulyásleves</span>
+                <strong>2500 Ft</strong>
+            </div>
+            <div class="food-item">
+                <span>Gombakrémleves</span>
+                <strong>1700 Ft</strong>
+            </div>
+            <div class="food-item">
+                <span>Hagymakrémleves</span>
+                <strong>1800 Ft</strong>
+            </div>
+        </div>
+    </article>
+
+    <!-- TÁLAK -->
+    <article class="menu-card">
+        <div class="menu-header" onclick="toggleMenu(this)">
+            <div class="food-icon">🥗</div>
+            <div class="menu-info">
+                <h3>Tálak</h3>
+                <strong>3000-10000 Ft</strong>
+            </div>
+            
+        </div>
+
+        <div class="menu-content">
+            <div class="food-item">
+                <span>Hidegtál</span>
+                <strong>3500 Ft</strong>
+            </div>
+            <div class="food-item">
+                <span>Rántott vegyes tál</span>
+                <strong>5500 Ft</strong>
+            </div>
+            <div class="food-item">
+                <span>Grilltál</span>
+                <strong>6500 Ft</strong>
+            </div>
+            <div class="food-item">
+                <span>Családi tál (4 személyes)</span>
+                <strong>10000 Ft</strong>
+            </div>
+        </div>
+    </article>
+
+</div>
+
     </section>
 
     <section class="section reservation-section" id="foglalas">
@@ -224,6 +366,6 @@
     <a href="index.html" class="logo">Étterem név</a>
     <a href="admin.html">Adminisztráció</a>
 </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
