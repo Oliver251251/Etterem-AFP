@@ -224,28 +224,35 @@ section {
 
 /*étlap*/
 
+
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 22px;
     max-width: 1050px;
     margin: 0 auto;
+    align-items: start;
 }
 
 .menu-card {
-    display: flex;
-    gap: 20px;
-    padding: 24px;
+    display: block;
+    align-self: start;
+    height: fit-content;
+    min-width: 0;
+    padding: 0;
+    overflow: hidden;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 12px;
     box-shadow: var(--shadow);
-    transition: transform 0.2s;
+    transition: box-shadow 0.2s ease;
 }
 
 .menu-card:hover {
-    transform: translateY(-4px);
+    transform: none;
+    border-color: var(--primary);
 }
+
 
 .food-icon {
     width: 85px;
@@ -359,15 +366,13 @@ section {
 
 /* Lenyíló étellista */
 
+
 .menu-content {
     max-height: 0;
     padding: 0 24px;
     overflow: hidden;
     opacity: 0;
-    transition:
-        max-height 0.4s ease,
-        opacity 0.3s ease,
-        padding 0.4s ease;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
 }
 
 .menu-card.active .menu-content {
@@ -375,6 +380,7 @@ section {
     padding: 0 24px 24px;
     opacity: 1;
 }
+
 
 /* Egy étel sora */
 
