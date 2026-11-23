@@ -43,9 +43,13 @@
         <!-- adatbázisból majd ide kellenek az ételek -->
 
         
-<div class="menu-grid">
 
-    <!-- FŐÉTELEK -->
+<div class="menu-layout">
+
+    <!-- BAL OLDAL: ÉTLAP -->
+    <div class="menu-grid">
+
+        <!-- FŐÉTELEK -->
     <article class="menu-card">
         <div class="menu-header" onclick="toggleMenu(this)">
             <div class="food-icon">🍝</div>
@@ -246,6 +250,40 @@
             </div>
         </div>
     </article>
+    </div>
+
+    <!-- JOBB OLDAL: CHAT -->
+    <aside class="chat-panel">
+
+        <div class="chat-header">
+            <div>
+                <h3>Éttermi asszisztens</h3>
+            </div>
+            <span class="chat-status"></span>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-message ai-message">
+                Szia! 👋 Üdvözöllek éttermünkben!
+                Van kalóriahatárod? Ha szeretnéd össze tudok rakni neked egy étrendet.😊
+            </div>
+        </div>
+
+        <form class="chat-input-area" id="chatForm">
+            <input
+                type="text"
+                id="chatInput"
+                placeholder="Írd ide az üzeneted..."
+                required
+            >
+            <button type="submit">➤</button>
+        </form>
+
+        <p class="chat-note">
+            Ez a chat AI-t használ
+        </p>
+
+    </aside>
 
 </div>
 
